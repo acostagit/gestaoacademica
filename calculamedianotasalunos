@@ -1,0 +1,100 @@
+# gestaoacademica
+Sistema de Gestão Academica em Java
+
+package com;
+
+import java.util.Scanner;
+
+public class GesAcademico {
+
+	public static void main(String[] args) {
+		
+		Double  Bim1, Bim2, Bim3;
+		Double mediaSemestral;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("** Sistema de Gestão Acadêmica ** \n");
+		System.out.print("-------------------------------------\n");
+		System.out.print(" Cálculo de Notas \n");
+		System.out.print("-------------------------------------\n");
+		System.out.print(" \n");
+		
+		System.out.print("Avaliação 1o Bimestre: \n");
+		System.out.print("============================================\n");	
+		
+		System.out.print("Digite o nome do Aluno: \n");
+		String nome = sc.nextLine();
+		System.out.print("-------------------------------------\n");			
+		
+		System.out.print("Digite a nota da Prova: \n");
+		Integer notaProva1 = sc.nextInt();
+		
+		System.out.print("Digite a nota da Projeto: \n");
+		Integer notaProjeto1 = sc.nextInt();
+		
+		System.out.print("Digite a nota da Lista de Exercicios: \n");
+		Integer notaExercicio1 = sc.nextInt();
+				
+		System.out.print("Digite a nota da Contribuição/Conclusão: \n");
+		Integer notaContribuicaoConclusao1 = sc.nextInt();
+		
+		 double mediaBim1 = ((notaProva1 * 3) + (notaProjeto1 * 3) + (notaExercicio1 * 2) + (notaContribuicaoConclusao1 *3)) / (3+3+2+3);
+		// System.out.println("Bim1 " + mediaBim1);
+		 
+		 System.out.print(" \n");
+		 System.out.print("Avaliação 2o Bimestre: \n");
+		System.out.print("============================================\n");			
+		
+		System.out.print("Digite a nota da Prova: \n");
+		Integer notaProva2 = sc.nextInt();
+		
+		System.out.print("Digite a nota da Projeto: \n");
+		Integer notaProjeto2 = sc.nextInt();
+		
+		System.out.print("Digite a nota da Lista de Exercicios: \n");
+		Integer notaExercicio2 = sc.nextInt();
+				
+		System.out.print("Digite a nota da Contribuição/Conclusão: \n");
+		Integer notaContribuicaoConclusao2 = sc.nextInt();
+		
+		 double mediaBim2 = ((notaProva2 * 3) + (notaProjeto2 * 3) + (notaExercicio2 * 2) + (notaContribuicaoConclusao2 *3)) / (3+3+2+3);
+		 
+		 System.out.print(" \n");
+		 System.out.print("Avaliação 3o Bimestre: \n");
+		 System.out.print("============================================\n");	
+		
+		System.out.print("Digite a nota da Prova: \n");
+		Integer notaProva3 = sc.nextInt();
+		
+		System.out.print("Digite a nota da Projeto: \n");
+		Integer notaProjeto3 = sc.nextInt();
+		
+		System.out.print("Digite a nota da Lista de Exercicios: \n");
+		Integer notaExercicio3 = sc.nextInt();
+				
+		System.out.print("Digite a nota da Contribuição/Conclusão: \n");
+		Integer notaContribuicaoConclusao3 = sc.nextInt();
+		
+		 double mediaBim3 = ((notaProva3 * 3) + (notaProjeto3 * 3) + (notaExercicio3 * 2) + (notaContribuicaoConclusao3 *3)) / (3+3+2+3);
+	
+		mediaSemestral = (mediaBim1 + mediaBim2 + mediaBim3)/3;
+		double notaFinal=0f;
+		
+		System.out.println("Média semestral: " + mediaSemestral);
+		
+		if(mediaSemestral >=8) {
+			System.out.println("************* Aprovado *************");
+		}
+		else {
+			notaFinal = (10-mediaSemestral);
+		
+			if(notaFinal <5) {
+				System.out.println("************* Reprovado *************");
+			}
+			else {
+				System.out.println("*********** Aprovado (Prova Final) **********");
+			}
+		}
+	}
+}
+
